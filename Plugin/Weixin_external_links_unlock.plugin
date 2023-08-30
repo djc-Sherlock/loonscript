@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weixin.png
 
 [Script]
-http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Script/Weixin_external_links_unlock.js, tag=微信外部链接解锁
+http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Script/Weixin_external_links_unlock.js, requires-body=true, timeout=10, tag=解除微信链接限制
 
 [MITM]
 hostname = weixin110.qq.com, security.wechat.com
