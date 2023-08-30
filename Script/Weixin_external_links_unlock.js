@@ -36,7 +36,7 @@ if (cgiData.type === 'gray' || cgiData.type === 'newgray' || cgiData.type === 'e
 	trueURL = trueURL.indexOf('http') == 0 ? trueURL : 'http://' + trueURL;
 	if (ipRegex.test(trueURL)) {
 		// 如果URL是IP地址，则中止运行
-		return;
+		$done({});
 	} else {
 		if (/qr\.alipay/.test(trueURL)) {
 			notify('', '点击跳转到支付宝打开', trueURL, alipayScheme + encodeURIComponent(trueURL));
