@@ -37,22 +37,23 @@ if (cgiData.type === 'gray' || cgiData.type === 'newgray' || cgiData.type === 'e
 	if (ipRegex.test(trueURL)) {
 		// 如果URL是IP地址，则中止运行
 		return;
-	}
-	if (/qr\.alipay/.test(trueURL)) {
-		notify('', '点击跳转到支付宝打开', trueURL, alipayScheme + encodeURIComponent(trueURL));
-		$done({});
 	} else {
-		notify('', '点击跳转到浏览器打开', trueURL, trueURL);
-		if (forceRedirect) {
-			let redirect = {
-				status: redirectStatus,
-				headers: {
-					Location: trueURL
-				}
-			};
-			if (isQuanX) redirect.body = respBody;
-			$done(redirect);
-		} else $done({});
+		if (/qr\.alipay/.test(trueURL)) {
+			notify('', '点击跳转到支付宝打开', trueURL, alipayScheme + encodeURIComponent(trueURL));
+			$done({});
+		} else {
+			notify('', '点击跳转到浏览器打开', trueURL, trueURL);
+			if (forceRedirect) {
+				let redirect = {
+					status: redirectStatus,
+					headers: {
+						Location: trueURL
+					}
+				};
+				if (isQuanX) redirect.body = respBody;
+				$done(redirect);
+			} else $done({});
+		}
 	}
 } else if (cgiData.type === 'block') {
 	!(async () => {
