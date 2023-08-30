@@ -34,9 +34,8 @@ let cgiData = JSON.parse(cgiDataReg.exec(respBody)[1].replace(/\\/g, ''));
 if (cgiData.type === 'gray' || cgiData.type === 'newgray' || cgiData.type === 'empty') {
 	let trueURL = he.decode(`${cgiData.hasOwnProperty('url') ? cgiData.url : /http(.*)/.exec(cgiData.desc)[0]}`);
 	trueURL = trueURL.indexOf('http') == 0 ? trueURL : 'http://' + trueURL;
-	console.log(trueURL);
-	console.log(ipRegex.test(trueURL));
-	if (ipRegex.test(trueURL)) {
+        const hostname = new URL(trueURL).hostname;
+	if (ipRegex.test(hostname)) {
 		// 如果URL是IP地址，则中止运行
 		$done({});
 	} else {
