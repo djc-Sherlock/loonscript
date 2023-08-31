@@ -21,17 +21,14 @@ if (typeof $argument != 'undefined') {
 (async () => {
   const mb = $.lodash_get(arg, 'mb') || 10
   const bytes = mb * 1024 * 1024
-  let up = {'url': 'http://speed.bestip.one/__up', timeout:3000}
   let down = {'url': `http://speed.bestip.one/__down?bytes=${bytes}`, timeout:3000}
   let cp = {'url': `http://speed.bestip.one/__up?bytes=${bytes}`, timeout:3000}
   // 兼容性修正
   if ($.isLoon()) {
-      up = ReRequest(up, $environment?.params?.node);
       down = ReRequest(down, $environment?.params?.node);
       cp = ReRequest(cp, $environment?.params?.node);
   }
   else if ($.isQuanX()) {
-      up = ReRequest(up, $environment?.params);
       down = ReRequest(down, $environment?.params);
       cp = ReRequest(cp, $environment?.params);
   }
