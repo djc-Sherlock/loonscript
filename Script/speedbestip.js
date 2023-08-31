@@ -1,5 +1,5 @@
 /*
-作者：@wuhu_zzz @xream @keywos @整点猫咪 技术指导：整点薯条 
+作者：@wuhu_zzz @xream @keywos @整点猫咪 @djc-Sherlock 技术指导：整点薯条 
 fix 修改成speedbestip进行测速，有的cf被阻断了
 整点花里胡哨
 各种花里胡哨参数，通过argument传入，用=连接key及相应value，用&链接各种key，可以任意选择想填入的参数
