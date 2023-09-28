@@ -35,8 +35,8 @@ if (typeof $response == "undefined") {
   };
   const data = {
     "expires_date": "6666-06-06T06:06:06Z",
-    "original_purchase_date": "2023-09-06T06:06:06Z",
-    "purchase_date": "2023-09-06T06:06:06Z",
+    "original_purchase_date": "2023-01-06T06:06:06Z",
+    "purchase_date": "2023-01-06T06:06:06Z",
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
