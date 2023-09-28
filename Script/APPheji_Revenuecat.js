@@ -11,7 +11,7 @@ hostname = api.revenuecat.com
 
 */
 const a = {};
-const a6 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+var a6 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 a6 = {
   "request_date_ms" : 1691745938403,
   "request_date" : "2023-03-11T09:25:38Z",
