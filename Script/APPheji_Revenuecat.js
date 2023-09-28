@@ -31,7 +31,7 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = 'gd';
   const UAMappings = {
-    '%E8%BD%A6%E7%A5%A8%E7%A5%A8/1 CFNetwork/1331.0.7 Darwin/21.4.0':{ name: 'vip', id: 'eticket_with_watch_life_b'},
+    '%E8%BD%A6%E7%A5%A8%E7%A5%A8':{ name: 'vip', id: 'eticket_with_watch_life_b'},
   };
   const data = {
     "expires_date": "6666-06-06T06:06:06Z",
