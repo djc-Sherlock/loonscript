@@ -31,12 +31,12 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = 'gd';
   const UAMappings = {
-    '%E8%BD%A6%E7%A5%A8%E7%A5%A8':{ name: 'vip', id: 'eticket_family_sharing_for_old_member'},
+    '%E8%BD%A6%E7%A5%A8%E7%A5%A8':{ name: 'vip', id: 'eticket_6_life'},
   };
   const data = {
     "expires_date": "6666-06-06T06:06:06Z",
-    "original_purchase_date": "2023-06-06T06:06:06Z",
-    "purchase_date": "2023-06-06T06:06:06Z",
+    "original_purchase_date": "2023-09-06T06:06:06Z",
+    "purchase_date": "2023-09-06T06:06:06Z",
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
