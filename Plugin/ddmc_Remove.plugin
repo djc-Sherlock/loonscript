@@ -1,0 +1,16 @@
+#!name = 叮咚买菜去开屏广告
+#!desc = 移除开屏广告
+#!openUrl = 
+#!author = Sherlock
+#!homepage = https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Plugin/ddmc_Remove.plugin
+#!icon = 
+#!date = 2023-12-04 17:04:14
+
+[Rewrite]
+# 开屏广告 #主机名maicai.api.ddxq.mobi
+^https:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id reject-dict
+# 新人弹窗
+^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop reject-dict
+
+[Mitm]
+hostname = maicai.api.ddxq.mobi
