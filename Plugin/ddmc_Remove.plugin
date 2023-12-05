@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = Sherlock
 #!homepage = https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Plugin/ddmc_Remove.plugin
-#!icon = 
+#!icon = https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Icon/ddmc.png
 #!date = 2023-12-04 17:04:14
 
 [Rewrite]
