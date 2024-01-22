@@ -1,7 +1,7 @@
 #!name=公考雷达
 #!desc=公考雷达
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1074.png
-
+#!icon = https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Icon/gkld.jpg
+#!date = 2024-01-22 09:23:14
 [Rewrite]
 
 https:\/\/errlog\.umeng\.com\/api\/crashsdk\/logcollect - reject
