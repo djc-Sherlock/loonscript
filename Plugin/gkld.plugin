@@ -11,7 +11,7 @@ https:\/\/api\.gongkaoleida\.com\/api\/v.+\/ad\/info - reject
 
 [Script]
 
-http-response https:\/\/api\.gongkaoleida\.com\/api script-path=https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Script/gkld.js, requires-body=true, timeout=60 ,tag=gkld
+http-response https:\/\/api\.gongkaoleida\.com\/api script-path=https://raw.githubusercontent.com/djc-Sherlock/loonscript/main/Script/gkld.js, requires-body=true, timeout=60 ,tag=公考雷达解锁
 
 
 
