@@ -2,7 +2,6 @@ let requestUrl = $request.url;
 let obj = JSON.parse($response.body.replace(/\"isAuth\":false/g, "\"isAuth\":true").replace(/\"isAuth\":\"0\"/g, "\"isAuth\":1").replace(/\"isVip\":\"0\"/g, "\"isVip\":1").replace(/\"vipGrade\":\"0\"/g, "\"vipGrade\":1").replace(/\"vipExpire\":\"0\"/g, "\"vipExpire\":1726411565000"));
 
 if (/^https:\/\/api\.gongkaoleida\.com\/api\/v.+\/user\/getInfo?/.test(requestUrl)) {
-  obj.data.userInfo.nickname = obj.data.userInfo.nickname + "_xiaomao";
   obj.data.userInfo.vipGrade = 2;
   obj.data.userInfo.vipExpire = 1726411565000;
   obj.data.userInfo.isVip = 1;
@@ -22,8 +21,8 @@ if (/^https:\/\/api\.gongkaoleida\.com\/api\/v.+\/user\/getInfo?/.test(requestUr
     isVip: 1
   }];
 } else if (/^https:\/\/api\.gongkaoleida\.com\/api\/v.+\/sets\/getFilterResult?/.test(requestUrl)) {
-  obj.data.jobStaff.vipGrade = 0;
-  obj.data.articleStaff.vipGrade = 0;
+  obj.data.jobStaff.vipGrade = 2;
+  obj.data.articleStaff.vipGrade = 2;
 } else if (/^https:\/\/api\.gongkaoleida\.com\/api\/v.+\/exam\/getExamList?/.test(requestUrl)) {
   obj.data.isValid = 0;
   obj.data.result.status = 200;
@@ -50,8 +49,9 @@ if (/^https:\/\/api\.gongkaoleida\.com\/api\/v.+\/user\/getInfo?/.test(requestUr
   obj.data.vipInfo.vipExpireDate = 1726411565000;
   obj.data.vipInfo.vipExpire = 1;
   obj.data.vipInfo.isVip = 1;
-  obj.data.vipInfo.vipGrade = 1;
+  obj.data.vipInfo.vipGrade = 2;
   obj.data.isAuth = true;
+  obj.data.isUnPublish = true;
 }
 
 $done({
