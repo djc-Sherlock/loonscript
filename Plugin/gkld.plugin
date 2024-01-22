@@ -5,22 +5,15 @@
 [Rewrite]
 
 https:\/\/errlog\.umeng\.com\/api\/crashsdk\/logcollect - reject
-https:\/\/api\.gongkaoleida\.com\/api\/v5\/my\/index - reject
-https:\/\/api\.gongkaoleida\.com\/api\/v4_1_2\/sets\/getAllTips - reject
-https:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info - reject
-https:\/\/member\.aliyundrive\.com\/v1\/config\/customCapsule - reject-dict
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/my\/index - reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/sets\/getAllTips - reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/ad\/info - reject
 
 [Script]
 
-http-response https:\/\/api\.gongkaoleida\.com\/api\/v5_4_4\/exam\/jobSearchList script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, requires-body=true, timeout=60 ,tag=gkld_18
+http-response https:\/\/api\.gongkaoleida\.com\/api script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, requires-body=true, timeout=60 ,tag=gkld
 
-http-response https:\/\/api\.gongkaoleida\.com\/api\/v5_4_0\/exam\/getExamList script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, requires-body=true, timeout=60 ,tag=gkld_19
 
-http-response https:\/\/api\.gongkaoleida\.com\/api\/v5_4_3\/sets\/getFilterResult script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, requires-body=true, timeout=60 ,tag=gkld_22
-
-http-response https:\/\/api\.gongkaoleida\.com\/api\/v5_4_3\/my\/vipCardInfo script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, requires-body=true, timeout=60 ,tag=gkld_25
-
-http-response https:\/\/api\.gongkaoleida\.com\/api\/v5_3_7\/user\/getInfo script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, requires-body=true, timeout=60 ,tag=gkld_26
 
 [MITM]
 
