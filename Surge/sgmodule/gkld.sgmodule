@@ -3,7 +3,6 @@
 
 [URL Rewrite]
 
-https:\/\/errlog\.umeng\.com\/api\/crashsdk\/logcollect - reject
 https:\/\/api\.gongkaoleida\.com\/api\/v5\/my\/index - reject
 https:\/\/api\.gongkaoleida\.com\/api\/v4_1_2\/sets\/getAllTips - reject
 https:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info - reject
@@ -26,4 +25,4 @@ https:\/\/member\.aliyundrive\.com\/v1\/config\/customCapsule data="https://raw.
 
 [MITM]
 
-hostname = %APPEND% errlog.umeng.com,api.gongkaoleida.com
+hostname = %APPEND% api.gongkaoleida.com
