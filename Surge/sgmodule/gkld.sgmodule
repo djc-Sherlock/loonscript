@@ -3,26 +3,13 @@
 
 [URL Rewrite]
 
-https:\/\/api\.gongkaoleida\.com\/api\/v5\/my\/index - reject
-https:\/\/api\.gongkaoleida\.com\/api\/v4_1_2\/sets\/getAllTips - reject
-https:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info - reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/my\/index url reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/sets\/getAllTips url reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/ad\/info url reject
 
 [Script]
 
-gkld_18 = type=http-response, pattern=https:\/\/api\.gongkaoleida\.com\/api\/v5_4_4\/exam\/jobSearchList, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, timeout=60, script-update-interval=0
-
-gkld_19 = type=http-response, pattern=https:\/\/api\.gongkaoleida\.com\/api\/v5_4_0\/exam\/getExamList, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, timeout=60, script-update-interval=0
-
-gkld_22 = type=http-response, pattern=https:\/\/api\.gongkaoleida\.com\/api\/v5_4_3\/sets\/getFilterResult, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, timeout=60, script-update-interval=0
-
-gkld_25 = type=http-response, pattern=https:\/\/api\.gongkaoleida\.com\/api\/v5_4_3\/my\/vipCardInfo, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, timeout=60, script-update-interval=0
-
-gkld_26 = type=http-response, pattern=https:\/\/api\.gongkaoleida\.com\/api\/v5_3_7\/user\/getInfo, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, timeout=60, script-update-interval=0
-
-[Map Local]
-
-https:\/\/member\.aliyundrive\.com\/v1\/config\/customCapsule data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+gkld = type=http-response, pattern=https:\/\/api\.gongkaoleida\.com\/api, requires-body=1, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/gkld.js, timeout=60, script-update-interval=0
 
 [MITM]
-
 hostname = %APPEND% api.gongkaoleida.com
