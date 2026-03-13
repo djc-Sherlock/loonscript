@@ -7327,7 +7327,7 @@ const notify = $.isNode() ? require("./sendNotify") : "";
               case 2:
                 $.log("[INFO] 抽奖:".concat(null == at || null === (ap = at.prize) || undefined === ap ? undefined : ap.name));
                 $.log("等等");
-                $.wait(1)
+                $.wait(2000)
                 this.drawCount = true;
                 au.n = 4;
                 break;
